@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Task from "./components/Task";
+import '@fontsource-variable/league-spartan'
+import TaskLocalStore from "./components/TaskLocalStore";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="min-h-[100dvh] flex flex-col justify-center items-center">
+    <div className="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
+    <h1 className="text-5xl uppercase text-purple-500 mb-8">Write down your tasks!</h1>
+    <Task/>
+   {/*  <TaskLocalStore/> */}
+    </section>
   );
 }
 
